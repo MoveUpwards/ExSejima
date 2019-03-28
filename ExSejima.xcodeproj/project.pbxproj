@@ -10,7 +10,6 @@
 		4DF1CA342BADE8BF9E0130BD /* Pods_ExSejima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ECA3DE8D5170C8DF2993DD /* Pods_ExSejima.framework */; };
 		540710BDBCC5436D0F46FE9E /* Pods_ExSejimaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62C5D2256D1BAB4CD9D5F65 /* Pods_ExSejimaTests.framework */; };
 		F323B79B224A6AA600415E10 /* ExSejima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F323B791224A6AA600415E10 /* ExSejima.framework */; };
-		F323B7A0224A6AA600415E10 /* ExSejimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F323B79F224A6AA600415E10 /* ExSejimaTests.swift */; };
 		F323B7A2224A6AA600415E10 /* ExSejima.h in Headers */ = {isa = PBXBuildFile; fileRef = F323B794224A6AA600415E10 /* ExSejima.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F365DD8E224D1CCB0099B628 /* MUDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365DD8D224D1CCB0099B628 /* MUDate.swift */; };
 		F365DD90224D1D490099B628 /* MUDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365DD8F224D1D490099B628 /* MUDateTests.swift */; };
@@ -36,7 +35,6 @@
 		F323B794224A6AA600415E10 /* ExSejima.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExSejima.h; sourceTree = "<group>"; };
 		F323B795224A6AA600415E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F323B79A224A6AA600415E10 /* ExSejimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExSejimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F323B79F224A6AA600415E10 /* ExSejimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSejimaTests.swift; sourceTree = "<group>"; };
 		F323B7A1224A6AA600415E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F365DD8D224D1CCB0099B628 /* MUDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUDate.swift; sourceTree = "<group>"; };
 		F365DD8F224D1D490099B628 /* MUDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUDateTests.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		F323B79E224A6AA600415E10 /* ExSejimaTests */ = {
 			isa = PBXGroup;
 			children = (
-				F323B79F224A6AA600415E10 /* ExSejimaTests.swift */,
 				F323B7A1224A6AA600415E10 /* Info.plist */,
 				F365DD8F224D1D490099B628 /* MUDateTests.swift */,
 			);
@@ -337,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F323B7A0224A6AA600415E10 /* ExSejimaTests.swift in Sources */,
 				F365DD90224D1D490099B628 /* MUDateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

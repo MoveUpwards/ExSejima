@@ -56,57 +56,47 @@ extension Date {
     ///
     /// - Parameter format: Date format (default is "dd/MM/yyyy").
     /// - Returns: date string.
-    public func string(withFormat format: String = "dd/MM/yyyy HH:mm") -> String {
+    public func string(_ format: String = "yyyy-MM-dd HH:mm:ss Z") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
 
+    /// Date ISO8601 string from date.
+    ///
+    ///     Date().iso8601() -> "1970-01-01T00:00:00Z"
+    ///
+    /// - Returns: ISO8601 date string.
+    public func iso8601() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        return dateFormatter.string(from: self)
+    }
+
     /// Date string from date.
     ///
-    ///     Date().dateString(ofStyle: .short) -> "1/12/17"
-    ///     Date().dateString(ofStyle: .medium) -> "Jan 12, 2017"
-    ///     Date().dateString(ofStyle: .long) -> "January 12, 2017"
-    ///     Date().dateString(ofStyle: .full) -> "Thursday, January 12, 2017"
+    ///     Date().string(date: .short) -> "1/12/17"
+    ///     Date().string(date: .medium) -> "Jan 12, 2017"
+    ///     Date().string(date: .long) -> "January 12, 2017"
+    ///     Date().string(date: .full) -> "Thursday, January 12, 2017"
+    ///
+    ///     Date().string(time: .short) -> "7:37 PM"
+    ///     Date().string(time: .medium) -> "7:37:02 PM"
+    ///     Date().string(time: .long) -> "7:37:02 PM GMT+3"
+    ///     Date().string(time: .full) -> "7:37:02 PM GMT+03:00"
+    ///
+    ///     Date().string(date: .short, time: .short) -> "1/12/17, 7:32 PM"
+    ///     Date().string(date: .medium, time: .medium) -> "Jan 12, 2017, 7:32:00 PM"
+    ///     Date().string(date: .long, time: .long) -> "January 12, 2017 at 7:32:00 PM GMT+3"
+    ///     Date().string(date: .full, time: .full) -> "Thursday, January 12, 2017 at 7:32:00 PM GMT+03:00"
     ///
     /// - Parameter style: DateFormatter style (default is .medium).
     /// - Returns: date string.
-    public func dateString(ofStyle style: DateFormatter.Style = .medium) -> String {
+    public func string(date dateStyle: DateFormatter.Style = .none,
+                       time timeStyle: DateFormatter.Style = .none) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .none
-        dateFormatter.dateStyle = style
-        return dateFormatter.string(from: self)
-    }
-
-    /// Date and time string from date.
-    ///
-    ///     Date().dateTimeString(ofStyle: .short) -> "1/12/17, 7:32 PM"
-    ///     Date().dateTimeString(ofStyle: .medium) -> "Jan 12, 2017, 7:32:00 PM"
-    ///     Date().dateTimeString(ofStyle: .long) -> "January 12, 2017 at 7:32:00 PM GMT+3"
-    ///     Date().dateTimeString(ofStyle: .full) -> "Thursday, January 12, 2017 at 7:32:00 PM GMT+03:00"
-    ///
-    /// - Parameter style: DateFormatter style (default is .medium).
-    /// - Returns: date and time string.
-    public func dateTimeString(ofStyle style: DateFormatter.Style = .medium) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = style
-        dateFormatter.dateStyle = style
-        return dateFormatter.string(from: self)
-    }
-
-    /// Time string from date
-    ///
-    ///     Date().timeString(ofStyle: .short) -> "7:37 PM"
-    ///     Date().timeString(ofStyle: .medium) -> "7:37:02 PM"
-    ///     Date().timeString(ofStyle: .long) -> "7:37:02 PM GMT+3"
-    ///     Date().timeString(ofStyle: .full) -> "7:37:02 PM GMT+03:00"
-    ///
-    /// - Parameter style: DateFormatter style (default is .medium).
-    /// - Returns: time string.
-    public func timeString(ofStyle style: DateFormatter.Style = .medium) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = style
-        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = timeStyle
+        dateFormatter.dateStyle = dateStyle
         return dateFormatter.string(from: self)
     }
 
@@ -164,4 +154,3 @@ extension TimeInterval {
         return 24 * .hour
     }()
 }
-
