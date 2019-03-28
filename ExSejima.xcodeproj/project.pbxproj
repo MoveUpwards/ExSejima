@@ -12,6 +12,8 @@
 		F323B79B224A6AA600415E10 /* ExSejima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F323B791224A6AA600415E10 /* ExSejima.framework */; };
 		F323B7A0224A6AA600415E10 /* ExSejimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F323B79F224A6AA600415E10 /* ExSejimaTests.swift */; };
 		F323B7A2224A6AA600415E10 /* ExSejima.h in Headers */ = {isa = PBXBuildFile; fileRef = F323B794224A6AA600415E10 /* ExSejima.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F365DD8E224D1CCB0099B628 /* MUDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365DD8D224D1CCB0099B628 /* MUDate.swift */; };
+		F365DD90224D1D490099B628 /* MUDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365DD8F224D1D490099B628 /* MUDateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F323B79A224A6AA600415E10 /* ExSejimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExSejimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F323B79F224A6AA600415E10 /* ExSejimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSejimaTests.swift; sourceTree = "<group>"; };
 		F323B7A1224A6AA600415E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F365DD8D224D1CCB0099B628 /* MUDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUDate.swift; sourceTree = "<group>"; };
+		F365DD8F224D1D490099B628 /* MUDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUDateTests.swift; sourceTree = "<group>"; };
 		FD860C2BF61C4B4DF6CE683F /* Pods-ExSejima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExSejima.debug.xcconfig"; path = "Target Support Files/Pods-ExSejima/Pods-ExSejima.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 			children = (
 				F323B79F224A6AA600415E10 /* ExSejimaTests.swift */,
 				F323B7A1224A6AA600415E10 /* Info.plist */,
+				F365DD8F224D1D490099B628 /* MUDateTests.swift */,
 			);
 			path = ExSejimaTests;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		F323B7AB224A6C5600415E10 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F365DD8D224D1CCB0099B628 /* MUDate.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				TargetAttributes = {
 					F323B790224A6AA600415E10 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					F323B799224A6AA600415E10 = {
 						CreatedOnToolsVersion = 10.2;
@@ -322,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F365DD8E224D1CCB0099B628 /* MUDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F323B7A0224A6AA600415E10 /* ExSejimaTests.swift in Sources */,
+				F365DD90224D1D490099B628 /* MUDateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD860C2BF61C4B4DF6CE683F /* Pods-ExSejima.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -487,6 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.ExSejima;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 970CAE81682F3A9A2F804527 /* Pods-ExSejima.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -522,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50739D734AE69CBE57404011 /* Pods-ExSejimaTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6S4Z2KMUS;
 				INFOPLIST_FILE = ExSejimaTests/Info.plist;
@@ -541,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71778BBD68BE3AED82CF6C3D /* Pods-ExSejimaTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6S4Z2KMUS;
 				INFOPLIST_FILE = ExSejimaTests/Info.plist;
