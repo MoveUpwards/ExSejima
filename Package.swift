@@ -1,17 +1,17 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "ExSejima",
     platforms: [
-        .iOS(.v10),
+        .iOS(.v10)
     ],
     products: [
         .library(
             name: "ExSejima",
             targets: ["ExSejima"]
-        ),
+        )
     ],
     dependencies: [],
     targets: [
@@ -19,6 +19,6 @@ let package = Package(
             name: "ExSejima",
             dependencies: [],
             path: "ExSejima/Source"
-        ),
+        )
     ]
 )
